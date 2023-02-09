@@ -1,10 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-header{
+
+header {
     width: 100%;
     height: 10vh;
     background-color: green;
@@ -12,35 +13,42 @@ header{
     align-items: center;
     justify-content: space-around;
 }
-.sec{
+
+.sec {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#logo a{
+
+#logo a {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#logo a img{
+
+#logo a img {
     width: 15%;
     height: 60%;
 }
-#title h1{
+
+#title h1 {
     color: red;
     text-shadow: 2px 2px yellow;
 }
-#user p{
+
+#user p {
     color: yellow;
 }
-#username{
+
+#username {
     color: red;
 }
-nav{
+
+nav {
     width: 100%;
     height: 5vh;
     background-color: yellow;
@@ -48,7 +56,8 @@ nav{
     align-items: center;
     justify-content: space-around;
 }
-nav a{
+
+nav a {
     width: 20%;
     height: 100%;
     display: flex;
@@ -57,51 +66,112 @@ nav a{
     text-decoration: none;
     color: red;
 }
-nav a:hover{
+
+nav a:hover {
     background-color: green;
 }
-#library{
+
+#library {
     width: 80%;
     height: 85vh;
     box-shadow: 5px 5px yellow;
     overflow-y: scroll;
 }
-#library h2{
+
+#library h2 {
     position: relative;
     top: 20px;
     color: red;
     text-shadow: 2px 2px yellow;
 }
-#library table{
+
+#library table {
     position: relative;
     top: 50px;
     width: 90%;
     height: 100%;
     text-align: center;
     box-shadow: 0px 0px 5px 5px red;
-    
+
 }
-thead tr{
+
+thead tr {
     background-color: green;
     height: 50px;
 }
-th{
+
+th {
     color: red;
     text-shadow: 2px 2px yellow;
 }
-td{
+
+td {
     color: red;
     border: 1px dotted yellow;
 }
-td button{
+
+td button {
     background-color: green;
     width: 50px;
     height: 50px;
     color: yellow;
     border-radius: 10px;
 }
-td button:hover{
+
+td button:hover {
     background-color: yellow;
     color: green;
     width: 60px;
+}
+
+#login {
+    position: relative;
+    top: 50px;
+    width: 80%;
+    height: 350px;
+    box-shadow: 2px 2px 2px 2px yellow inset;
+}
+
+#login p {
+    position: relative;
+    top: 20px;
+    color: yellow;
+    background-color: green;
+    font-size: 20px;
+    width: 40%;
+}
+
+#loginForm {
+    position: relative;
+    top: 20px;
+    width: 60%;
+    height: 80%;
+    box-shadow: 3px 3px red;
+}
+
+#loginForm label,
+input {
+    position: relative;
+    top: 60px;
+}
+
+#loginForm label {
+    color: green;
+    font-size: 30px;
+}
+
+#loginForm input {
+    width: 250px;
+    height: 30px;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+#loginForm button {
+    position: relative;
+    top: 60px;
+    width: 150px;
+    height: 30px;
+    background-color: green;
+    color: yellow;
 }

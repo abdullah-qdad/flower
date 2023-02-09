@@ -58,8 +58,22 @@ function display(array) {
     }
 }
 
+const form = document.getElementById("loginForm");
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
 
+  const email = form.elements.email.value;
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+  } else {
+    userName(email);
+  }
+});
 
+function validateEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
 
 function userName(name) {
     document.getElementById("username").textContent = name;
