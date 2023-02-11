@@ -1,5 +1,7 @@
 "use strict";
 
+var isLoggedIn = false;
+
 const flowers = [
     { name: "Rose", description: "A beautiful red flower.", price: 2.99, number: 20 },
     { name: "Lily", description: "A tall, elegant white flower.", price: 3.99, number: 15 },
@@ -43,13 +45,19 @@ function display(array) {
         const buttonCell = document.createElement("td");
         const button = document.createElement("button");
         button.innerText = "Buy";
+        // button.id = `buyButton${i}`;
         button.addEventListener("click", function () {
+          if (!isLoggedIn) {
+            alert("Please Login First");
+          } else {
             if (flower.number > 0) {
-                flower.number--;
-                numberCell.innerHTML = flower.number;
-            } else {
-                alert("Out od stock");
-            }
+              flower.number--;
+              numberCell.innerHTML = flower.number;
+          } else {
+              alert("Out od stock");
+          }
+          }
+            
 
         });
         buttonCell.appendChild(button);
@@ -67,6 +75,7 @@ form.addEventListener("submit", function(event) {
     alert("Please enter a valid email address.");
   } else {
     userName(email);
+    isLoggedIn = true;
   }
 });
 
@@ -78,3 +87,6 @@ function validateEmail(email) {
 function userName(name) {
     document.getElementById("username").textContent = name;
 }
+
+// const buyButtons = document.querySelectorAll("button[id^='buyButton']");
+// console.log(buyButtons);
